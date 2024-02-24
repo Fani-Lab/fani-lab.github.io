@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>404</title>
+</head>
+<body>
+    <p>404: page not found.</p>
+    <script>
+      window.onload = () => {
+          currentURL = window.location.href;
+          lowerCaseURL = currentURL.toLowerCase();
+          <!--Makes sure OpeNTF URL becomes case insensitive. Sub-pages must be lowercase, otherwise exceptions will have to be made here. --> 
+          if (lowerCaseURL.indexOf("opentf") > -1) {
+              newURL = lowerCaseURL.replace(/opentf/, 'OpeNTF');
+              location.replace(newURL);
+          }
+      };
+  </script>
+</body>
+</html>
